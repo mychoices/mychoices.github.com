@@ -1,3 +1,30 @@
+/*
+ * Containers
+ */
+
+body {
+  background: rgba(20,5,0,1);
+}
+
+main {
+  background: rgba(255,255,255,1);
+}
+
+.fixedBorder-8px {
+  position: fixed;
+  height: 8px;
+  width: 100%;
+  background: rgba(20,5,0,1);
+}
+
+.fixedBorder-8px.is-top {
+  top: 0;
+}
+
+.fixedBorder-8px.is-bottom {
+  bottom: 0;
+}
+
 /* 
  * Type 
  * */
@@ -118,6 +145,10 @@ a.is-secondary {
 
 .u-paddingRight-16px {
   padding-right: 16px;
+}
+
+.u-paddingBottom-8px {
+  padding-bottom: 8px;
 }
 
 .u-paddingLeft-16px {
