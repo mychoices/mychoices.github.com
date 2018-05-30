@@ -8,8 +8,8 @@ Defaults
 body {
   font-family: Tajawal, sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   color: rgb(16,0,31); /*Twilight Shadows*/
 }
 
@@ -30,7 +30,12 @@ h2 {
 }
 
 h3 {
-  margin: 0 0 0 0;
+  padding-left: 2px;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
 }
 
 p {
@@ -211,6 +216,10 @@ About
   max-width: 520px;
 }
 
-.description-section {
+.description-sectionSpacing {
   margin-top: 40px;
+}
+
+.description-contactLink {
+  margin-top: 8px;
 }
