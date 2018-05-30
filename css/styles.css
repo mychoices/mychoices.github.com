@@ -52,7 +52,7 @@ a.is-colorNegative:active {
   color: papayawhip;
 }
 
-.is-underline {
+.u-underline {
  text-decoration: underline;
 }
 
@@ -69,6 +69,14 @@ figure {
 /* 3:4 aspect ratio */
 figure[data-ratio="4:3"] {
   padding-top: 133.33%;
+}
+
+figure[data-ratio="gritcube"] {
+  padding-top: 102.92%;
+}
+
+figure[data-ratio="simpool"] {
+  padding-top: 102.92%;
 }
 
 figure img {
@@ -141,12 +149,22 @@ Projects
 }
 
 .caseStudy-overview {
+  width: 100%;
   max-width: 320px;
-  padding-right: 8px;
 }
 
 .overview-section {
   margin-top: 40px;
+}
+
+.caseStudy-cta {
+  max-width: 200px;
+  display: block;
+  background: papayawhip;
+}
+
+.caseStudy-imageContainer {
+  width: 100%;
 }
 
 /*****************************
@@ -177,14 +195,14 @@ About
   flex-wrap: wrap;
 }
 
-.about-pictureContainer {
+.about-imageContainer {
   margin-right: 40px;
   margin-bottom: 8px;
   width: 100%;
   max-width: 320px;
 }
 
-.about-picture {
+.about-image {
   width: 100%;
   max-width: 320px;
 }
