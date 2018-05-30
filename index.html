@@ -18,10 +18,9 @@
     <!-- Place <link> tags below -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal:300,500" rel="stylesheet">
 
     <!-- Place <script> tags below -->
-    <script src="https://use.fontawesome.com/3f97483eb7.js"></script>
   </head>
 
   <body>
@@ -31,12 +30,10 @@
           <span>Milo Cho</span>
           <span class="contact-email"><a class="is-colorNegative" href="mailto:milo.yj.cho@gmail.com">milo.yj.cho@gmail.com</a></span>
         </div>
-        <div class="banner">
-          <h1 class="banner-text">
+        <h1 class="header-title">
             <span class="is-underline">Designing</span> digital products 
             with thoughtful <span class="is-underline">experiences</span>
-          </h1>
-        </div>
+        </h1>
       </div>
     </header>
 
@@ -44,26 +41,49 @@
       <!--
       Projects
 
-      The following section provides and overview for each selected project
+      The following section provides an overview for each selected project
       -->
-      <section>
-        <div>
-          <h2>Selected projects</h2>
-        </div>
-        <section>
-          <h2>Connecting African entrepreneurs with global experts</h2>
-          <div>
-            <div>
-              <section>
+      <section class="projects-container">
+        <h2 class="projects-title">Selected projects</h2>
+
+        <!-- Case Study: Gritcube -->
+        <section class="caseStudy-container">
+          <h2 class="caseStudy-title">Connecting African entrepreneurs with global experts</h2>
+          <div class="caseStudy-content">
+            <div class="caseStudy-overview">
+              <section class="overview-section">
                 <h3>Challenge</h3>
                 <p>Redesign Gritcube's website</p>
               </section>
-              <section>
+              <section class="overview-section">
                 <h3>Outcome</h3>
-                <p>Updated the layout and style of <a href="gritcube.org">gritcube.org</a></p>
+                <p>Updated the layout and style of <a href="https://www.gritcube.org">gritcube.org</a></p>
               </section>
-              <div>
-                <a><span>→ </span>View Case Study</a>
+              <div class="overview-section">
+                <a href="https://medium.com/@my.choices/connecting-african-entrepreneurs-with-global-experts-c38ea0333025"><span>→ </span>View Case Study</a>
+              </div>
+            </div>
+            <div>
+              <!-- TODO: insert image -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Case Study: Simpool -->
+        <section class="caseStudy-container">
+          <h2 class="caseStudy-title">Bringing On-Demand to Pool Service</h2>
+          <div class="caseStudy-content">
+            <div class="caseStudy-overview">
+              <section class="overview-section">
+                <h3>Challenge</h3>
+                <p>Design the first version of Simpool</p>
+              </section>
+              <section class="overview-section">
+                <h3>Outcome</h3>
+                <p>Prototype and mockups ready for development and a teaser site</p>
+              </section>
+              <div class="overview-section">
+                <a href="https://medium.com/@my.choices/connecting-african-entrepreneurs-with-global-experts-c38ea0333025"><span>→ </span>View Case Study</a>
               </div>
             </div>
             <div>
@@ -78,44 +98,45 @@
 
       The following section provides more information about me
       -->
-      <section>
-        <div>
-          <h2>Hello, its me.</h2>
-        </div>
-        <div>
-          <div>
-            <!-- TODO: insert image -->
-          </div>
-          <div>
-            <section>
-              <h3>Freelance experience designer</h3>
-              <p>
-              I enjoy creating products through a collaborative and 
-              transparent process. I strive to maintain a shared 
-              understanding of goals and expectations and a safe 
-              environment for constructive feedback.
-              </p>
-            </section>
-            <section>
-              <h3>Proactively curious</h3>
-              <p>
-              When I’m not designing, you can find me trying to make 
-              sense of the world and myself through photography, 
-              writing, and travel. Most recently, I lived independently in 
-              a retrofitted minivan for 9 months.
-              </p>
-            </section>
-            <section>
-              <h3>Get in touch :)</h3>
-              <p>
-              - instagram.com/my.choices
-              - medium.com/@my.choices
-              - linkedin.com
-
-              And in case you missed it, I’m Milo, and my email is 
-              milo.yj.cho@gmail.com
-              </p>
-            </section>
+      <section class="about-background">
+        <div class="about-container">
+          <h2 class="about-title">Hello, its me.</h2>
+          <div class="about-content">
+            <div class="about-profilePicture">
+              <!-- TODO: insert image -->
+              <img src="./images/me.png" alt="Picture of Milo Cho" width="320px" />
+            </div>
+            <div class="about-descriptions">
+              <section>
+                <h3>Freelance experience designer</h3>
+                <p>
+                I enjoy creating products through a collaborative and 
+                transparent process. I strive to maintain a shared 
+                understanding of goals and expectations and a safe 
+                environment for constructive feedback.
+                </p>
+              </section>
+              <section class="description-section">
+                <h3>Proactively curious</h3>
+                <p>
+                When I’m not designing, you can find me trying to make 
+                sense of the world and myself through photography, 
+                writing, and travel. Most recently, I lived independently in 
+                a retrofitted minivan for 9 months.
+                </p>
+              </section>
+              <section class="description-section">
+                <h3>Get in touch :)</h3>
+                <p><a href="https://instagram.com/my.choices"><span>→ </span>instagram.com/my.choices</a></p>
+                <p><a href="https://medium.com/@my.choices"><span>→ </span>medium.com/@my.choices</a></p>
+                <p><a href="https://linkedin.com/in/milo-yj-cho"><span>→ </span>linkedin.com/in/milo-yj-cho</a></p>
+                <br/>
+                <p>
+                And in case you missed it, I’m Milo, and my email is 
+                <a href="mailto:milo.yj.cho@gmail.com">milo.yj.cho@gmail.com</a>
+                </p>
+              </section>
+            </div>
           </div>
         </div>
       </section>

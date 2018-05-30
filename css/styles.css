@@ -6,15 +6,15 @@ Defaults
 ----------------------------*/
 
 body {
-  font-family: Oxygen, sans-serif;
-  font-weight: 400;
+  font-family: Tajawal, sans-serif;
+  font-weight: 300;
   font-size: 20px;
-  line-height: 36px;
+  line-height: 32px;
   color: rgb(16,0,31); /*Twilight Shadows*/
 }
 
 h1, h2, h3, a {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 0 0;
 }
 
 p {
@@ -56,11 +56,13 @@ a.is-colorNegative:active {
  text-decoration: underline;
 }
 
-/* Header
-----------------------------*/
+/*****************************
+Header
+*****************************/
+
 header {
   color: papayawhip;
-  background: rgb(16,0,31);
+  background: rgb(16,0,31); /*Twilight Shadows*/
 }
 
 .headerContent-container {
@@ -78,13 +80,84 @@ header {
   margin-left: auto;
 }
 
-.banner {
-  max-width: 672px;
-  margin-top: 120px;
+.header-title {
   padding-bottom: 200px;
+  padding-left: 8px;
+  max-width: 640px;
+  margin-top: 120px;
   border-left: 1px solid papayawhip;
 }
 
-.banner-text {
-  margin-left: 8px;
+/*****************************
+Projects
+*****************************/
+
+.projects-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: auto;
+}
+
+.projects-title {
+  padding-top: 200px;
+  padding-left: 8px;
+  margin-left: 320px;
+  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
+}
+
+.caseStudy-container {
+  margin-top: 120px;
+}
+
+.caseStudy-title {
+  border-bottom: 1px solid rgb(16,0,31); /*Twilight Shadows*/
+}
+
+.caseStudy-content {
+  display: flex;
+}
+
+.caseStudy-overview {
+  max-width: 320px;
+  padding-right: 8px;
+}
+
+.overview-section {
+  margin-top: 40px;
+}
+
+/*****************************
+Projects
+*****************************/
+
+.about-background {
+  background: rgb(242,242,243); /*Cool Shade*/
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 120px auto 0 auto;
+  padding-left: 120px;
+  padding-bottom: 200px;
+}
+
+.about-title {
+  padding-top: 200px;
+  padding-left: 8px;
+  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
+}
+
+.about-content {
+  margin-top: 40px;
+  display: flex;
+}
+
+.about-descriptions {
+  max-width: 520px;
+  margin-left: 40px;
+}
+
+.description-section {
+  margin-top: 40px;
 }
