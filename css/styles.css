@@ -61,6 +61,30 @@ a.is-colorNegative:active {
  text-decoration: underline;
 }
 
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  h3, body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
 /* Images 
 ----------------------------------*/
 
@@ -102,8 +126,8 @@ header {
 }
 
 .headerContent-container {
-  width: 100%;
   max-width: 1040px;
+  padding: 0 16px;
   margin: auto;
 }
 
@@ -129,8 +153,8 @@ Projects
 *****************************/
 
 .projects-container {
-  width: 100%;
   max-width: 1040px;
+  padding: 0 16px;
   margin: auto;
 }
 
@@ -172,6 +196,21 @@ Projects
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .projects-title {
+    margin-left: 0px;
+  }
+
+  .caseStudy-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caseStudy-overview {
+    max-width: 520px;
+  }
+}
+
 /*****************************
 About
 *****************************/
@@ -183,8 +222,8 @@ About
 }
 
 .about-container {
-  width: 100%;
   max-width: 1040px;
+  padding: 0 16px;
   margin: 120px auto 0 auto;
 }
 
@@ -197,7 +236,6 @@ About
 .about-content {
   margin-top: 40px;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .about-imageContainer {
@@ -222,4 +260,22 @@ About
 
 .description-contactLink {
   margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-background {
+    padding-left: 0;
+  }
+
+  .about-container {
+    max-width: 520px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-descriptions {
+    max-width: 520px;
+  }
 }
