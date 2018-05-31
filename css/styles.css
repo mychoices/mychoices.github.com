@@ -186,7 +186,7 @@ Projects
 }
 
 .projects-title {
-  padding-top: 200px;
+  padding-top: 120px;
   padding-left: 8px;
   margin-left: 320px;
   border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
@@ -194,6 +194,10 @@ Projects
 
 .caseStudy-container {
   margin-top: 120px;
+}
+
+.caseStudy-container.is-first {
+  margin-top: 80px;
 }
 
 .caseStudy-title {
@@ -244,7 +248,7 @@ About
 .about-background {
   background: rgb(242,242,243); /*Cool Shade*/
   padding-bottom: 120px;
-  margin: 120px 120px 80px 0;
+  margin: 120px 120px 0 0;
 }
 
 .about-container {
@@ -254,7 +258,7 @@ About
 }
 
 .about-title {
-  padding-top: 200px;
+  padding-top: 120px;
   padding-left: 8px;
   border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
 }
@@ -295,6 +299,9 @@ About
 }
 
 @media screen and (max-width: 767px) {
+  .about-background {
+    padding-bottom: 40px;
+  }
   .about-container {
     max-width: 520px;
   }
