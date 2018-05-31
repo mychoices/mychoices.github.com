@@ -14,7 +14,7 @@ body {
 }
 
 h1, h2, h3, a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h1 {
@@ -46,21 +46,28 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: rgb(16,0,31); /*Twilight Shadows*/
+  color: rgb(85,0,189); /*Royal Hue*/
 }
 
 a:link,
 a:visited {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:active {
-  text-decoration: underline;
-  font-style: italic;
+  text-decoration: line-through;
+}
+
+a.is-inline:link,
+a.is-inline:visited,
+a.is-inline:hover,
+a.is-inline:active {
+  color: rgb(16,0,31); /*Twilight Shadows*/
+  font-weight: 500;
 }
 
 a.is-colorNegative:link,
@@ -70,8 +77,9 @@ a.is-colorNegative:active {
   color: papayawhip;
 }
 
-.u-underline {
- text-decoration: underline;
+.u-highlight {
+  background: papayawhip;
+  color: rgb(16,0,31); /*Twilight Shadows*/
 }
 
 @media screen and (max-width: 767px) {
@@ -149,6 +157,12 @@ header {
   display: flex;
 }
 
+.contact-name {
+  font-weight: 600;
+  background: papayawhip;
+  color: rgb(16,0,31); /*Twilight Shadows*/
+}
+
 .contact-email {
   margin-left: auto;
 }
@@ -200,9 +214,8 @@ Projects
 }
 
 .caseStudy-cta {
-  max-width: 200px;
-  display: block;
-  background: papayawhip;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .caseStudy-imageContainer {
@@ -215,7 +228,7 @@ Projects
   }
 
   .caseStudy-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -230,14 +243,14 @@ About
 
 .about-background {
   background: rgb(242,242,243); /*Cool Shade*/
-  padding-left: 120px;
-  padding-bottom: 200px;
+  padding-bottom: 120px;
+  margin: 120px 120px 80px 0;
 }
 
 .about-container {
-  max-width: 1040px;
+  max-width: 800px;
   padding: 0 16px;
-  margin: 120px auto 0 auto;
+  margin: auto;
 }
 
 .about-title {
@@ -272,14 +285,16 @@ About
 }
 
 .description-contactLink {
-  margin-top: 8px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .about-background {
+    margin: 120px 0 0 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .about-background {
-    padding-left: 0;
-  }
-
   .about-container {
     max-width: 520px;
   }
@@ -290,5 +305,9 @@ About
 
   .about-descriptions {
     max-width: 520px;
+  }
+
+  .description-contactLink {
+    text-align: center;
   }
 }
