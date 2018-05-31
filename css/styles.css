@@ -47,7 +47,20 @@ a:visited,
 a:hover,
 a:active {
   color: rgb(16,0,31); /*Twilight Shadows*/
+}
+
+a:link,
+a:visited {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 a.is-colorNegative:link,
