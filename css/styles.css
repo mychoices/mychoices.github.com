@@ -66,8 +66,7 @@ a.is-inline:link,
 a.is-inline:visited,
 a.is-inline:hover,
 a.is-inline:active {
-  color: rgb(16,0,31); /*Twilight Shadows*/
-  font-weight: 500;
+  font-weight: 300;
 }
 
 a.is-colorNegative:link,
