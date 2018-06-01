@@ -6,7 +6,7 @@ Defaults
 ----------------------------*/
 
 body {
-  font-family: Tajawal, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
@@ -193,10 +193,6 @@ Projects
 
 .caseStudy-container {
   margin-top: 120px;
-}
-
-.caseStudy-container.is-first {
-  margin-top: 80px;
 }
 
 .caseStudy-title {
