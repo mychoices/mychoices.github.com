@@ -24,16 +24,24 @@ h1 {
 }
 
 h2 {
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0 0 0 0;
+}
+
+h3 {
   font-size: 24px;
   line-height: 36px;
   margin: 0 0 0 0;
 }
 
-h3 {
-  margin: 0 0 8px 0;
-  font-size: 18px;
+h4 {
+  font-size: 14px;
   line-height: 28px;
-  font-weight: 500;
+  margin: 0 0 0 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(16,0,31,0.7); /*Twilight Shadows*/
 }
 
 p {
@@ -196,7 +204,7 @@ nav .nav-item:last-child {
 .headerTitle-container {
   padding-bottom: 200px;
   padding-left: 8px;
-  max-width: 496px;
+  max-width: 624px;
   margin-top: 120px;
   border-left: 1px solid papayawhip;
 }
@@ -208,6 +216,7 @@ nav .nav-item:last-child {
 
 .header-description {
   margin-top: 8px;
+  font-weight: 300;
 }
 
 /*****************************
@@ -235,12 +244,8 @@ footer.is-inverted {
   justify-content: space-between;
 }
 
-.footer-section {
-  display: flex;
-}
-
 .footer-section .footer-item:not(:first-child) {
-  margin-left: 16px;
+  margin-top: 16px;
 }
 
 .footer-item.is-header {
@@ -271,12 +276,9 @@ Projects
   margin-top: 120px;
 }
 
-.caseStudy-title {
-  border-bottom: 1px solid rgb(16,0,31); /*Twilight Shadows*/
-}
-
 .caseStudy-content {
   display: flex;
+  align-items: center;
 }
 
 .caseStudy-overview {
@@ -295,6 +297,9 @@ Projects
 
 .caseStudy-imageContainer {
   width: 100%;
+  margin-left: 40px;
+  box-shadow: 4px 6px 24px rgba(16,0,31,0.1),
+              -4px 6px 24px rgba(16,0,31,0.1);
 }
 
 @media screen and (max-width: 767px) {
