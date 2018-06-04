@@ -9,33 +9,31 @@ body {
   font-family: Lato, sans-serif;
   font-weight: 300;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 28px;
   color: rgb(16,0,31); /*Twilight Shadows*/
 }
 
 h1, h2, h3, a {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 47px;
-  line-height: 72px;
+  font-size: 40px;
+  line-height: 56px;
   margin: 0 0 0 0;
 }
 
 h2 {
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 36px;
   margin: 0 0 0 0;
 }
 
 h3 {
-  padding-left: 2px;
   margin: 0 0 8px 0;
   font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
+  line-height: 28px;
+  font-weight: 500;
 }
 
 p {
@@ -59,7 +57,28 @@ a:hover {
 }
 
 a:active {
-  text-decoration: line-through;
+  text-decoration: none;
+}
+
+.nav-item a:link,
+.nav-item a:visited,
+.nav-item a:hover,
+.nav-item a:active {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: none;
+  color: rgb(16,0,31); /*Twilight Shadows*/
+}
+
+.footer-item a:link,
+.footer-item a:visited,
+.footer-item a:hover,
+.footer-item a:active {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  color: rgb(16,0,31); /*Twilight Shadows*/
 }
 
 a.is-inline:link,
@@ -69,16 +88,17 @@ a.is-inline:active {
   font-weight: 300;
 }
 
-a.is-colorNegative:link,
-a.is-colorNegative:visited,
-a.is-colorNegative:hover,
-a.is-colorNegative:active {
+a.is-inverted:link,
+a.is-inverted:visited,
+a.is-inverted:hover,
+a.is-inverted:active {
   color: papayawhip;
 }
 
 .u-highlight {
   background: papayawhip;
   color: rgb(16,0,31); /*Twilight Shadows*/
+  padding: 0 4px;
 }
 
 @media screen and (max-width: 767px) {
@@ -145,33 +165,89 @@ header {
   background: rgb(16,0,31); /*Twilight Shadows*/
 }
 
+header.is-inverted {
+  color: rgb(16,0,31); /*Twilight Shadows*/
+  background: white; 
+}
+
 .headerContent-container {
   max-width: 1040px;
   padding: 0 16px;
   margin: auto;
 }
 
-.contact-container {
+nav {
   padding-top: 40px;
   display: flex;
 }
 
-.contact-name {
-  font-weight: 600;
-  background: papayawhip;
-  color: rgb(16,0,31); /*Twilight Shadows*/
+nav .nav-item:not(:first-child) {
+  margin-left: 16px;
 }
 
-.contact-email {
+nav .nav-item:last-child {
   margin-left: auto;
 }
 
-.header-title {
+.contact-name {
+  font-weight: 400;
+}
+
+.headerTitle-container {
   padding-bottom: 200px;
   padding-left: 8px;
-  max-width: 640px;
+  max-width: 496px;
   margin-top: 120px;
   border-left: 1px solid papayawhip;
+}
+
+.header-title {
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.header-description {
+  margin-top: 8px;
+}
+
+/*****************************
+Footer
+*****************************/
+
+footer {
+  color: papayawhip;
+  background: rgb(16,0,31); /*Twilight Shadows*/
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+footer.is-inverted {
+  color: rgb(16,0,31); /*Twilight Shadows*/
+  background: white; 
+}
+
+.footerContent-container {
+  max-width: 1040px;
+  margin: auto;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  display: flex;
+}
+
+.footer-section .footer-item:not(:first-child) {
+  margin-left: 16px;
+}
+
+.footer-item.is-header {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
 }
 
 /*****************************
@@ -181,7 +257,7 @@ Projects
 .projects-container {
   max-width: 1040px;
   padding: 0 16px;
-  margin: auto;
+  margin: 0 auto 120px auto;
 }
 
 .projects-title {
@@ -243,11 +319,11 @@ About
 .about-background {
   background: rgb(242,242,243); /*Cool Shade*/
   padding-bottom: 120px;
-  margin: 120px 120px 0 0;
+  margin-top: 16px;
 }
 
 .about-container {
-  max-width: 800px;
+  max-width: 928px;
   padding: 0 16px;
   margin: auto;
 }
@@ -265,7 +341,7 @@ About
 
 .about-imageContainer {
   margin-right: 40px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   width: 100%;
   max-width: 320px;
 }
@@ -283,13 +359,9 @@ About
   margin-top: 40px;
 }
 
-.description-contactLink {
-  margin-top: 16px;
-}
-
 @media screen and (max-width: 1023px) {
   .about-background {
-    margin: 120px 0 0 0;
+    margin: 16px 0 0 0;
   }
 }
 
@@ -307,9 +379,5 @@ About
 
   .about-descriptions {
     max-width: 520px;
-  }
-
-  .description-contactLink {
-    text-align: center;
   }
 }
