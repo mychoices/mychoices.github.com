@@ -22,12 +22,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- Place <script> tags below -->
   </head>
 
   <body>
-    <header>
+    <header class="workHeader">
       <div class="headerContent-container">
         <nav>
           <div class="nav-item u-underline"><a class="is-inverted" href="./index.html">Work</a></div>
@@ -39,7 +40,7 @@
             Milo Cho
           </h1>
           <p class="work-description">
-            Product Designer shaping digital experiences for social good and early-stage startups
+            Product Designer shaping digital experiences for social good and startups
           </p>
         </div>
       </div>
@@ -51,56 +52,66 @@
 
       The following section provides an overview for each selected project
       -->
-      <section class="projects-container">
-        <h2 class="projects-title">Selected projects</h2>
-
-        <!-- Case Study: Gritcube -->
-        <section class="caseStudy-container">
-          <div class="caseStudy-content">
-            <div class="caseStudy-overview">
-              <h3 class="caseStudy-title">Gritcube: Empowering African Entrepreneurs</h3>
-              <section class="overview-section">
-                <h4>CHALLENGE</h4>
-                <p>Reimagine Gritcube's website to make it easier to understand their purpose and membership process.</p>
-              </section>
-              <section class="overview-section">
-                <h4>OUTCOME</h4>
-                <p>New layout, look, and feel for each page of <a href="https://test-gritcube.weebly.com">gritcube.org</a>.</p>
-              </section>
-              <p class="caseStudy-cta">
-                <a href="https://medium.com/@my.choices/connecting-african-entrepreneurs-with-global-experts-c38ea0333025">View Case Study</a>
-              </p>
-            </div>
-            <div class="caseStudy-imageContainer">
-              <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/e7OPUtH4xV9aVoOiIN" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Case Study: Simpool
-        <section class="caseStudy-container">
-          <h3 class="caseStudy-title">Designing an on-demand pool service</h3>
-          <div class="caseStudy-content">
-            <div class="caseStudy-overview">
-              <section class="overview-section">
-                <h4>CHALLENGE</h4>
-                <p>Help Simpool envision how to bring on-demand to pool service.</p>
-              </section>
-              <section class="overview-section">
-                <h4>OUTCOME</h4>
-                <p>Prototype and mockups of two apps: one for customers and another for pool technicians.</p>
-              </section>
-              <div class="caseStudy-cta">
-                <a href="https://medium.com/@my.choices/bringing-on-demand-to-pool-service-3cef5c9d818c">View Case Study</a>
+      <section>
+        <div class="projectsTitle-container">
+          <h2 class="projects-title">
+            Selected projects
+            <div class="title-highlightContainer">
+              <div class="title-highlight">
               </div>
             </div>
-            <div class="caseStudy-imageContainer">
-              <figure data-ratio="simpool">
-                <img class="caseStudy-image" src="./images/simpool.png" alt="Simpool's teaser site" >
-              </figure>
+          </h2>
+        </div>
+
+        <div class="caseStudies-container">
+          <!-- Case Study: Gritcube -->
+          <section class="caseStudy-container">
+            <div class="caseStudy-content">
+              <div class="caseStudy-overview">
+                <h2 class="caseStudy-title">Gritcube: Empowering African Entrepreneurs</h2>
+                <section class="overview-section">
+                  <h3>CHALLENGE</h3>
+                  <p>Reimagine Gritcube's website to make it easier to understand their purpose and membership process.</p>
+                </section>
+                <section class="overview-section">
+                  <h3>OUTCOME</h3>
+                  <p>New layout, look, and feel for each page of <a href="https://test-gritcube.weebly.com">gritcube.org</a>.</p>
+                </section>
+                <p class="caseStudy-cta">
+                  <a href="https://medium.com/@my.choices/connecting-african-entrepreneurs-with-global-experts-c38ea0333025">View Case Study</a>
+                </p>
+              </div>
+              <div class="caseStudy-imageContainer">
+                <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/e7OPUtH4xV9aVoOiIN" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+              </div>
             </div>
-          </div>
-        </section> -->
+          </section>
+
+          <!-- Case Study: Simpool -->
+          <section class="caseStudy-container">
+            <div class="caseStudy-content">
+              <div class="caseStudy-overview">
+                <h2 class="caseStudy-title">Designing an on-demand pool service</h2>
+                <section class="overview-section">
+                  <h3>CHALLENGE</h3>
+                  <p>Help Simpool envision how to bring on-demand to pool service.</p>
+                </section>
+                <section class="overview-section">
+                  <h3>OUTCOME</h3>
+                  <p>Prototype and mockups of two apps: one for customers and another for pool technicians.</p>
+                </section>
+                <div class="caseStudy-cta">
+                  <a href="https://medium.com/@my.choices/bringing-on-demand-to-pool-service-3cef5c9d818c">View Case Study</a>
+                </div>
+              </div>
+              <div class="caseStudy-imageContainer">
+                <figure data-ratio="simpool">
+                  <img class="caseStudy-image" src="./images/simpool.png" alt="Simpool's teaser site" >
+                </figure>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
 
     </main>
@@ -109,17 +120,18 @@
       <div class="footerContent-container">
         <div class="footer-section">
           <div class="footer-item is-header">MILO CHO</div>
+          <div class="footer-item is-description">Product Designer shaping digital experiences for social good and startups</div>
         </div>
-        <div class="footer-section">
+        <div class="footer-section is-contact">
           <div class="footer-item is-header">CONTACT</div>
-          <div class="footer-item"><a class="is-inverted" href="mailto:milo.yj.cho@gmail.com">milo.yj.cho@gmail.com</a></div>
-          <div class="footer-item"><a class="is-inverted" href="tel:9164366402">916 436 6402</a></div>
-          <div class="footer-item">Digital Nomad in U.S.A.</div>
+          <div class="footer-item"><i class="footer-icon fas fa-envelope"></i><a class="is-inverted" href="mailto:milo.yj.cho@gmail.com">milo.yj.cho@gmail.com</a></div>
+          <div class="footer-item"><i class="footer-icon fas fa-phone"></i><a class="is-inverted" href="tel:9164366402">916 436 6402</a></div>
+          <div class="footer-item"><i class="footer-icon fas fa-map-marker"></i>Digital Nomad in U.S.A.</div>
         </div>
-        <div class="footer-section">
+        <div class="footer-section is-follow">
           <div class="footer-item is-header">FOLLOW</div>
-          <div class="footer-item"><a class="is-inverted" href="https://instagram.com/my.choices">Medium</a></div>
-          <div class="footer-item"><a class="is-inverted" href="https://instagram.com/my.choices">Instagram</a></div>
+          <div class="footer-item"><i class="footer-icon fab fa-medium"></i><a class="is-inverted" href="https://instagram.com/my.choices">Medium</a></div>
+          <div class="footer-item"><i class="footer-icon fab fa-instagram"></i><a class="is-inverted" href="https://instagram.com/my.choices">Instagram</a></div>
         </div>
       </div>
     </footer>
