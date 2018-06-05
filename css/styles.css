@@ -124,7 +124,7 @@ header.is-inverted {
 
 .headerContent-container {
   max-width: 1040px;
-  padding: 0 16px;
+  padding: 0 40px;
   margin: auto;
 }
 
@@ -193,7 +193,7 @@ footer.is-inverted {
 .footerContent-container {
   max-width: 1040px;
   margin: auto;
-  padding: 40px 16px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -234,6 +234,12 @@ footer.is-inverted {
 
 .footer-icon {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-section.is-follow {
+    margin-left: 80px;
+  }
 }
 
 /*****************************
@@ -294,16 +300,16 @@ Projects
   background: papayawhip;
 }
 
-.caseStudies-container {
+.caseStudyList-container {
   padding: 40px 0px 120px 0px;
 }
 
-.caseStudies-container .caseStudy-container:not(:first-child) {
+.caseStudyList-container .caseStudy-container:not(:first-child) {
   margin-top: 120px;
 }
 
 .caseStudy-container {
-  background: linear-gradient(to right, rgba(44, 45, 51, 0.03),white 50%); /*Dark Night Blue*/
+  background: linear-gradient(to right, rgba(44, 45, 51, 0.03),white); /*Dark Night Blue*/
   max-width: 1040px;
   padding: 40px;
   margin: auto;
@@ -349,6 +355,36 @@ Projects
 .caseStudy-imageContainer {
   width: 100%;
   margin-left: 40px;
+  background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
+}
+
+@media screen and (max-width: 1023px) {
+  .title-highlight {
+    width: 320px;
+  }
+
+  .caseStudyList-container {
+    padding: 0px 0px 120px 0px;
+    background: linear-gradient(to top, rgba(44, 45, 51, 0.03), rgba(44, 45, 51, 0.03) 120px, white 120px)
+  }
+
+  .caseStudy-container {
+    background: linear-gradient(to top, rgba(44, 45, 51, 0.03),white); /*Dark Night Blue*/
+  }
+
+  .caseStudy-content {
+    flex-direction: column-reverse;
+  }
+
+  .caseStudy-overview {
+    max-width: 520px;
+  }
+
+  .caseStudy-imageContainer {
+    max-width: 520px;
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -372,7 +408,7 @@ About
 
 .about-background {
   background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
-  padding-bottom: 120px;
+  padding: 120px 0;
   margin: 40px 0;
   box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
               -8px 8px 40px rgba(131,143,160,0.2);
@@ -380,12 +416,8 @@ About
 
 .about-container {
   max-width: 800px;
-  padding: 0 16px;
+  padding: 0 32px;
   margin: auto;
-}
-
-.about-title {
-  padding-top: 120px;
 }
 
 .about-content {
@@ -419,7 +451,17 @@ About
 
 @media screen and (max-width: 1023px) {
   .about-background {
-    margin: 16px 0 0 0;
+    background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
+    padding: 80px 0;
+  }
+
+  .about-descriptions {
+    min-width: 352px;
+  }
+
+  .about-figure {
+    position: sticky;
+    top: 280px;
   }
 }
 
@@ -427,6 +469,7 @@ About
   .about-background {
     padding-bottom: 40px;
   }
+
   .about-container {
     max-width: 520px;
   }
