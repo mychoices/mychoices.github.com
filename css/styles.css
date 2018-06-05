@@ -288,6 +288,8 @@ Projects
 
 .projects-title {
   position: relative;
+  font-weight: 700;
+  letter-spacing: 4px;
 }
 
 .title-highlightContainer {
