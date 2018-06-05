@@ -10,38 +10,37 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
-  color: rgb(16,0,31); /*Twilight Shadows*/
-}
-
-h1, h2, h3, a {
-  font-weight: 400;
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
 
 h1 {
   font-size: 40px;
-  line-height: 56px;
+  line-height: 60px;
   margin: 0 0 0 0;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 32px;
   line-height: 48px;
   margin: 0 0 0 0;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 24px;
   line-height: 36px;
   margin: 0 0 0 0;
+  font-weight: 400;
 }
 
 h4 {
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
   font-size: 14px;
   line-height: 28px;
   margin: 0 0 0 0;
-  font-weight: 700;
   letter-spacing: 2px;
-  color: rgba(16,0,31,0.7); /*Twilight Shadows*/
+  font-weight: 700;
 }
 
 p {
@@ -56,16 +55,10 @@ a:active {
 }
 
 a:link,
-a:visited {
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
+a:visited,
+a:hover,
 a:active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .nav-item a:link,
@@ -76,7 +69,7 @@ a:active {
   font-weight: 300;
   line-height: 24px;
   text-decoration: none;
-  color: rgb(16,0,31); /*Twilight Shadows*/
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
 
 .footer-item a:link,
@@ -86,14 +79,7 @@ a:active {
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
-  color: rgb(16,0,31); /*Twilight Shadows*/
-}
-
-a.is-inline:link,
-a.is-inline:visited,
-a.is-inline:hover,
-a.is-inline:active {
-  font-weight: 300;
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
 
 a.is-inverted:link,
@@ -105,8 +91,16 @@ a.is-inverted:active {
 
 .u-highlight {
   background: papayawhip;
-  color: rgb(16,0,31); /*Twilight Shadows*/
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
   padding: 0 4px;
+}
+
+.u-underline {
+  text-decoration: underline; 
+}
+
+.u-italic {
+  font-style: italic;
 }
 
 @media screen and (max-width: 767px) {
@@ -169,12 +163,12 @@ Header
 *****************************/
 
 header {
-  color: papayawhip;
-  background: rgb(16,0,31); /*Twilight Shadows*/
+  background-image: url("../images/sunset.png");
+  background-size: cover;
 }
 
 header.is-inverted {
-  color: rgb(16,0,31); /*Twilight Shadows*/
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
   background: white; 
 }
 
@@ -185,8 +179,8 @@ header.is-inverted {
 }
 
 nav {
-  padding-top: 40px;
   display: flex;
+  padding-top: 40px
 }
 
 nav .nav-item:not(:first-child) {
@@ -197,26 +191,24 @@ nav .nav-item:last-child {
   margin-left: auto;
 }
 
+.nav-item {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.nav-item.is-cta {
+  padding: 0 16px;
+  border: 1px solid rgba(44, 45, 51, 0.7); /*Dark Night Blue*/
+  border-radius: 16px;
+}
+
+.nav-item.is-cta.is-inverted {
+  border: 1px solid papayawhip;
+}
+
 .contact-name {
   font-weight: 400;
-}
-
-.headerTitle-container {
-  padding-bottom: 200px;
-  padding-left: 8px;
-  max-width: 624px;
-  margin-top: 120px;
-  border-left: 1px solid papayawhip;
-}
-
-.header-title {
-  font-weight: 700;
-  letter-spacing: 8px;
-}
-
-.header-description {
-  margin-top: 8px;
-  font-weight: 300;
 }
 
 /*****************************
@@ -225,14 +217,14 @@ Footer
 
 footer {
   color: papayawhip;
-  background: rgb(16,0,31); /*Twilight Shadows*/
+  background: rgb(44, 45, 51); /*Dark Night Blue*/
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
 }
 
 footer.is-inverted {
-  color: rgb(16,0,31); /*Twilight Shadows*/
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
   background: white; 
 }
 
@@ -256,6 +248,28 @@ footer.is-inverted {
 }
 
 /*****************************
+Work
+*****************************/
+
+.workTitle-container {
+  max-width: 400px;
+  margin-top: 120px;
+  padding-bottom: 160px;
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
+}
+
+.work-title {
+  padding: 24px 24px 0px 24px;
+  background: papayawhip;
+}
+
+.work-description {
+  padding: 0px 24px 24px 24px;
+  background: papayawhip;
+  font-weight: 300;
+}
+
+/*****************************
 Projects
 *****************************/
 
@@ -269,7 +283,6 @@ Projects
   padding-top: 120px;
   padding-left: 8px;
   margin-left: 320px;
-  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
 }
 
 .caseStudy-container {
@@ -322,21 +335,19 @@ About
 *****************************/
 
 .about-background {
-  background: rgb(242,242,243); /*Cool Shade*/
+  background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
   padding-bottom: 120px;
-  margin-top: 16px;
+  margin-top: 40px;
 }
 
 .about-container {
-  max-width: 928px;
+  max-width: 800px;
   padding: 0 16px;
   margin: auto;
 }
 
 .about-title {
   padding-top: 120px;
-  padding-left: 8px;
-  border-left: 1px solid rgb(16,0,31); /*Twilight Shadows*/
 }
 
 .about-content {
