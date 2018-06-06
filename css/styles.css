@@ -334,7 +334,7 @@ Projects
 }
 
 .caseStudy-container {
-  background: linear-gradient(to right, white, rgba(44, 45, 51, 0.05) 40px, white); /*Dark Night Blue*/
+  background: linear-gradient(to right, rgba(44, 45, 51, 0.05) 40px, rgba(44, 45, 51, 0)); /*Dark Night Blue*/
   max-width: 1040px;
   padding: 40px;
   margin: auto;
@@ -388,8 +388,12 @@ Projects
     width: 320px;
   }
 
+  .caseStudyList-container {
+    background: linear-gradient(to top, rgba(44, 45, 51, 0.1), rgba(44, 45, 51, 0.05) 120px, rgba(44, 45, 51, 0) 120px); /*Dark Night Blue*/
+  }
+
   .caseStudy-container {
-    background: linear-gradient(to top, white, rgba(44, 45, 51, 0.05) 40px, white); /*Dark Night Blue*/
+    background: linear-gradient(to top, rgba(44, 45, 51, 0.05) 40px, rgba(44, 45, 51, 0)); /*Dark Night Blue*/
   }
 
   .caseStudy-content {
