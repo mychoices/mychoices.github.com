@@ -91,7 +91,7 @@ figure[data-ratio="4:3"] {
 }
 
 figure[data-ratio="gritcube"] {
-  padding-top: 111.74%;
+  padding-top: 56%;
 }
 
 figure[data-ratio="simpool"] {
@@ -111,8 +111,9 @@ Header
 *****************************/
 
 header {
-  background-image: url("../images/sunset.png");
+  background-image: url("../images/sunset-min.png");
   background-size: cover;
+  background-color: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
 }
 
 header.is-inverted {
