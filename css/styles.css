@@ -17,7 +17,7 @@ h1 {
   font-size: 40px;
   line-height: 60px;
   margin: 0 0 0 0;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 h2 {
@@ -49,8 +49,8 @@ a:active {
   text-decoration: underline;
 }
 
-.u-underline {
-  text-decoration: underline; 
+.u-highlight {
+  background: papayawhip; 
 }
 
 @media screen and (max-width: 767px) {
@@ -111,12 +111,6 @@ Header
 *****************************/
 
 header {
-  background-image: url("../images/sunset-min.png");
-  background-size: cover;
-  background-color: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
-}
-
-header.is-inverted {
   color: rgb(44, 45, 51); /*Dark Night Blue*/
   background: white; 
 }
@@ -141,6 +135,7 @@ nav .nav-item:last-child {
 }
 
 .nav-item {
+  padding: 0 4px;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
@@ -154,18 +149,10 @@ nav .nav-item:last-child {
   color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
 
-.nav-item a.is-inverted {
-  color: papayawhip;
-}
-
 .nav-item.is-cta {
   padding: 0 16px;
   border: 1px solid rgba(44, 45, 51, 0.7); /*Dark Night Blue*/
   border-radius: 16px;
-}
-
-.nav-item.is-cta.is-inverted {
-  border: 1px solid papayawhip;
 }
 
 .contact-name {
@@ -183,16 +170,11 @@ Footer
 *****************************/
 
 footer {
-  color: papayawhip;
-  background: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  background: white; 
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-}
-
-footer.is-inverted {
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
-  background: white; 
 }
 
 .footerContent-container {
@@ -232,10 +214,6 @@ footer.is-inverted {
   font-weight: 300;
 }
 
-.footer-item a.is-inverted {
-  color: papayawhip;
-}
-
 .footer-icon {
   margin-right: 8px;
 }
@@ -272,25 +250,61 @@ footer.is-inverted {
 Work
 *****************************/
 
-.workTitle-container {
-  max-width: 328px;
-  margin-top: 160px;
-  padding-bottom: 200px;
+.work-masthead {
+  margin: 120px auto 0 auto;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
   color: rgb(44, 45, 51); /*Dark Night Blue*/
+  text-align: center;
 }
 
-.workTitle-background {
-  padding: 24px; 
+.work-mastheadTitle {
+
+}
+
+.name-row {
+  position: relative;
+  display: flex;
+}
+
+.name-row.is-first {
+  background: linear-gradient(white, white 50%, papayawhip 50%);
+}
+
+.name-letter {
+  width: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-separator {
+  height: 16px;
+  width: 16px;
+  background-color: rgb(44, 45, 51); /*Dark Night Blue*/
+}
+
+.work-mastheadDescription {
+  background: linear-gradient(to right, white 200px,
+                    papayawhip 200px, papayawhip 201px,
+                    white 202px, white 400px,
+                    papayawhip 400px, papayawhip 401px,
+                    white 402px, white 600px,
+                    papayawhip 600px, papayawhip 601px,
+                    white 602px);
+}
+
+.work-mastheadDescription p {
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 0 4px;
   background: papayawhip;
-  border-radius: 2px;
 }
 
 @media screen and (max-width: 767px) {
-  .workTitle-container {
-    max-width: 296px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  .work-masthead {
   }
 }
 
@@ -302,7 +316,6 @@ Projects
   z-index: -200;
   padding: 120px 24px 0px 24px;
   text-align: center;
-  background: linear-gradient(rgba(44, 45, 51, 0.1), rgba(0,0,0,0) 80px); /*Dark Night Blue*/
 }
 
 .projects-title {
@@ -341,7 +354,6 @@ Projects
 }
 
 .caseStudy-container {
-  background: linear-gradient(to right, rgba(44, 45, 51, 0.05) 40px, rgba(44, 45, 51, 0)); /*Dark Night Blue*/
   max-width: 1040px;
   padding: 40px;
   margin: auto;
@@ -395,14 +407,6 @@ Projects
     width: 320px;
   }
 
-  .caseStudyList-container {
-    background: linear-gradient(to top, rgba(44, 45, 51, 0.1), rgba(44, 45, 51, 0.05) 120px, rgba(44, 45, 51, 0) 120px); /*Dark Night Blue*/
-  }
-
-  .caseStudy-container {
-    background: linear-gradient(to top, rgba(44, 45, 51, 0.05) 40px, rgba(44, 45, 51, 0)); /*Dark Night Blue*/
-  }
-
   .caseStudy-content {
     flex-direction: column-reverse;
   }
@@ -451,19 +455,14 @@ About
 }
 
 .about-content {
-  margin-top: 40px;
   display: flex;
 }
 
 .about-imageContainer {
+  margin-top: 8px;
   margin-right: 40px;
   width: 100%;
   max-width: 320px;
-}
-
-.about-figure {
-  position: sticky;
-  top: 120px;
 }
 
 .about-image {
@@ -476,7 +475,7 @@ About
 }
 
 .description-sectionSpacing {
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -486,10 +485,6 @@ About
 
   .about-descriptions {
     min-width: 352px;
-  }
-
-  .about-figure {
-    top: 280px;
   }
 }
 
@@ -509,7 +504,6 @@ About
   }
 
   .about-content {
-    margin-top: 24px;
     flex-direction: column;
     align-items: center;
   }
@@ -517,11 +511,6 @@ About
   .about-imageContainer {
     margin-right: 0;
     margin-bottom: 24px;
-  }
-
-  .about-figure {
-    position: relative;
-    top: 0;
   }
 
   .about-descriptions {
