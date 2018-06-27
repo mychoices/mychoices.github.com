@@ -21,10 +21,10 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 36px;
   margin: 0 0 0 0;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h3 {
@@ -252,15 +252,10 @@ Work
 
 .work-masthead {
   margin: 120px auto 0 auto;
-  padding-bottom: 120px;
   display: flex;
   justify-content: center;
   color: rgb(44, 45, 51); /*Dark Night Blue*/
   text-align: center;
-}
-
-.work-mastheadTitle {
-
 }
 
 .name-row {
@@ -281,26 +276,41 @@ Work
 }
 
 .name-separator {
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
   background-color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
 
 .work-mastheadDescription {
-  background: linear-gradient(to right, white 200px,
-                    papayawhip 200px, papayawhip 201px,
-                    white 202px, white 400px,
-                    papayawhip 400px, papayawhip 401px,
-                    white 402px, white 600px,
-                    papayawhip 600px, papayawhip 601px,
-                    white 602px);
+  position: relative;
 }
 
 .work-mastheadDescription p {
+  position: relative;
+  z-index: 100;
   margin-top: 60px;
   margin-left: 200px;
   padding: 0 4px;
   background: papayawhip;
+}
+
+.work-masteheadTexture {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  display: flex;
+}
+
+.work-masteheadTexture .vertical-line {
+  margin-left: 200px;
+}
+
+.vertical-line {
+  height: 100%;
+  width: 2px;
+  background-color: papayawhip;
 }
 
 @media screen and (max-width: 767px) {
@@ -312,50 +322,17 @@ Work
 Projects
 *****************************/
 
-.projectsTitle-container {
-  z-index: -200;
-  padding: 120px 24px 0px 24px;
-  text-align: center;
-}
-
-.projects-title {
-  position: relative;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  word-spacing: 4px;
-}
-
-.title-highlightContainer {
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-highlight {
-  height: 8px;
-  width: 520px;
-  background: papayawhip;
-}
-
 .caseStudyList-container {
-  margin-top: 40px;
-  padding-bottom: 120px;
+  margin-bottom: 120px;
 }
 
-.caseStudyList-container .caseStudy-container:not(:first-child) {
+.caseStudyList-container .caseStudy-container {
   margin-top: 120px;
 }
 
 .caseStudy-container {
   max-width: 1040px;
-  padding: 40px;
+  padding: 0 40px;
   margin: auto;
 }
 
@@ -366,15 +343,18 @@ Projects
 
 .caseStudy-overview {
   width: 100%;
-  max-width: 320px;
+  max-width: 380px;
 }
 
-.overview-section {
-  margin-top: 24px;
+.caseStudy-separator {
+  height: 8px; 
+  width: 40px;
+  margin-bottom: 8px;
+  background: papayawhip;
 }
 
 .caseStudy-actions {
-  margin-top: 40px;
+  margin-top: 24px;
   display: flex;
   justify-content: space-around;
 }
@@ -399,7 +379,9 @@ Projects
 .caseStudy-imageContainer {
   width: 100%;
   margin-left: 40px;
-  background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
+  background: rgba(44, 45, 51, 0.7); /*Dark Night Blue*/
+  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
+              -8px 8px 40px rgba(131,143,160,0.2);
 }
 
 @media screen and (max-width: 1023px) {
@@ -423,10 +405,6 @@ Projects
 }
 
 @media screen and (max-width: 767px) {
-  .projects-title {
-    font-size: 18px; 
-  }
-
   .caseStudyList-container {
     margin-top: 0px;
   }
