@@ -49,10 +49,6 @@ a:active {
   text-decoration: underline;
 }
 
-.u-highlight {
-  background: papayawhip; 
-}
-
 @media screen and (max-width: 767px) {
   body {
     font-size: 16px;
@@ -148,6 +144,11 @@ nav .nav-item:last-child {
   line-height: 24px;
   color: rgb(44, 45, 51); /*Dark Night Blue*/
 }
+
+.nav-item.is-highlight {
+  background: linear-gradient(to top, papayawhip, papayawhip 8px, white 8px, white); 
+}
+
 
 .nav-item.is-cta {
   padding: 0 16px;
@@ -251,11 +252,18 @@ Work
 *****************************/
 
 .work-masthead {
-  margin: 120px auto 0 auto;
+  margin-top: 120px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   color: rgb(44, 45, 51); /*Dark Night Blue*/
-  text-align: center;
+}
+
+.work-mastheadTitle {
+  width: 380px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .name-row {
@@ -264,7 +272,11 @@ Work
 }
 
 .name-row.is-first {
-  background: linear-gradient(white, white 50%, papayawhip 50%);
+  background: papayawhip;
+}
+
+.name-row.is-last {
+  opacity: 0.4;
 }
 
 .name-letter {
@@ -282,35 +294,16 @@ Work
 }
 
 .work-mastheadDescription {
-  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin-left: 40px;
 }
 
 .work-mastheadDescription p {
-  position: relative;
-  z-index: 100;
-  margin-top: 60px;
-  margin-left: 200px;
-  padding: 0 4px;
+  margin: auto;
+  max-width: 428px;
+  text-align: center;
   background: papayawhip;
-}
-
-.work-masteheadTexture {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0px;
-  display: flex;
-}
-
-.work-masteheadTexture .vertical-line {
-  margin-left: 200px;
-}
-
-.vertical-line {
-  height: 100%;
-  width: 2px;
-  background-color: papayawhip;
 }
 
 @media screen and (max-width: 767px) {
