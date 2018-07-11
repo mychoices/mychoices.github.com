@@ -252,8 +252,8 @@ Work
 }
 
 .work-mastheadTitle {
-  width: 380px;
-  margin: auto;
+  width: 100%;
+  max-width: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,8 +299,20 @@ Work
   background: papayawhip;
 }
 
+@media screen and (max-width: 1023px) {
+  .work-masthead {
+    flex-direction: column;
+  }
+
+  .work-mastheadDescription {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .work-masthead {
+    margin-top: 80px;
   }
 }
 
@@ -387,12 +399,12 @@ Projects
 }
 
 @media screen and (max-width: 767px) {
-  .caseStudyList-container {
-    margin-top: 0px;
+  .caseStudyList-container .caseStudy-container {
+    margin-top: 80px;
   }
 
   .caseStudy-container {
-    padding: 40px 24px;
+    padding: 0 24px;
   }
 }
 
@@ -440,6 +452,13 @@ Contact
   border-radius: 16px;
   text-decoration: none;
   font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-section {
+    padding: 0 24px;
+    margin: 80px auto 80px auto;
+  }
 }
 
 /*****************************
