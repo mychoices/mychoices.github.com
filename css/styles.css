@@ -422,6 +422,10 @@ Contact
   margin: auto;
 }
 
+.contact-imageContainer figure {
+  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
+}
+
 .contact-section h2{
   margin-top: 16px;
 }
@@ -471,6 +475,10 @@ About
   margin-right: 40px;
   width: 100%;
   max-width: 320px;
+}
+
+.about-imageContainer figure {
+  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
 }
 
 .about-image {
