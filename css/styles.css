@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
 }
 
 h1 {
@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
   font-size: 14px;
   line-height: 28px;
   margin: 0 0 0 0;
@@ -44,7 +44,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: rgb(56, 97, 154); /* Evening Sky */
+  color: rgb(56, 97, 154); /* Evening Sky Blue */
   font-weight: 300;
   text-decoration: underline;
 }
@@ -82,16 +82,12 @@ figure {
 }
 
 /* 3:4 aspect ratio */
-figure[data-ratio="4:3"] {
+figure[data-ratio="3:4"] {
   padding-top: 133.33%;
 }
 
-figure[data-ratio="gritcube"] {
-  padding-top: 56%;
-}
-
-figure[data-ratio="simpool"] {
-  padding-top: 56%;
+figure[data-ratio="16:9"] {
+  padding-top: 56.25%;
 }
 
 figure img {
@@ -107,7 +103,7 @@ Header
 *****************************/
 
 header {
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
   background: white; 
 }
 
@@ -142,7 +138,7 @@ nav .nav-item:last-child {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
 }
 
 .nav-item.is-highlight {
@@ -150,14 +146,11 @@ nav .nav-item:last-child {
 }
 
 
-.nav-item.is-cta {
+.nav-item.is-cta a {
+  display: inline-block;
   padding: 0 16px;
-  border: 1px solid rgba(44, 45, 51, 0.7); /*Dark Night Blue*/
+  border: 1px solid rgba(44, 45, 51, 0.7); /*Dark Night*/
   border-radius: 16px;
-}
-
-.contact-name {
-  font-weight: 400;
 }
 
 @media screen and (max-width: 767px) {
@@ -171,7 +164,7 @@ Footer
 *****************************/
 
 footer {
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
   background: white; 
   font-size: 14px;
   font-weight: 300;
@@ -211,7 +204,7 @@ footer {
 }
 
 .footer-item a {
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night*/
   font-weight: 300;
 }
 
@@ -255,7 +248,7 @@ Work
   margin-top: 120px;
   display: flex;
   align-items: center;
-  color: rgb(44, 45, 51); /*Dark Night Blue*/
+  color: rgb(44, 45, 51); /*Dark Night */
 }
 
 .work-mastheadTitle {
@@ -290,7 +283,7 @@ Work
 .name-separator {
   height: 12px;
   width: 12px;
-  background-color: rgb(44, 45, 51); /*Dark Night Blue*/
+  background-color: rgb(44, 45, 51); /*Dark Night*/
 }
 
 .work-mastheadDescription {
@@ -314,10 +307,6 @@ Work
 /*****************************
 Projects
 *****************************/
-
-.caseStudyList-container {
-  margin-bottom: 120px;
-}
 
 .caseStudyList-container .caseStudy-container {
   margin-top: 120px;
@@ -353,7 +342,7 @@ Projects
 }
 
 .caseStudy-link {
-  color: rgb(56, 97, 154); /* Evening Sky */
+  color: rgb(56, 97, 154); /* Evening Sky Blue */
 }
 
 .caseStudy-link i {
@@ -372,7 +361,7 @@ Projects
 .caseStudy-imageContainer {
   width: 100%;
   margin-left: 40px;
-  background: rgba(44, 45, 51, 0.7); /*Dark Night Blue*/
+  background: rgba(44, 45, 51, 0.70); /*Dark Night*/
   box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
               -8px 8px 40px rgba(131,143,160,0.2);
 }
@@ -408,13 +397,61 @@ Projects
 }
 
 /*****************************
+Contact
+*****************************/
+
+.contact-section {
+  max-width: 1040px;
+  padding: 0 40px;
+  margin: 120px auto 80px auto;
+}
+
+.contact-container {
+  max-width: 600px;
+  padding: 40px 24px;
+  margin: auto;
+  text-align: center;
+  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
+  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
+              -8px 8px 40px rgba(131,143,160,0.2);
+}
+
+.contact-imageContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-section h2{
+  margin-top: 16px;
+}
+
+.contact-cta a {
+  display: inline-block;
+  width: 100%;
+  max-width: 80px;
+  margin: 16px auto 0 auto;
+  padding: 0 16px;
+  border: 2px solid rgb(56, 97, 154); /* Evening Sky Blue */
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*****************************
 About
 *****************************/
 
+.about-main {
+  max-width: 1040px;
+  padding: 0 40px;
+  margin: auto;
+}
+
 .about-background {
-  background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
   padding: 80px 0;
   margin: 40px 0;
+  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
   box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
               -8px 8px 40px rgba(131,143,160,0.2);
 }
@@ -451,7 +488,7 @@ About
 
 @media screen and (max-width: 1023px) {
   .about-background {
-    background: rgba(44, 45, 51, 0.05); /*Dark Night Blue*/
+    background: rgba(44, 45, 51, 0.05); /*Dark Night*/
   }
 
   .about-descriptions {
@@ -460,6 +497,10 @@ About
 }
 
 @media screen and (max-width: 767px) {
+  .about-main {
+    padding: 0 24px;
+  }
+
   .about-background {
     padding: 40px 0;
     box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
