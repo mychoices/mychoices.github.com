@@ -115,15 +115,18 @@ header {
 
 nav {
   display: flex;
+  align-items: center;
   padding-top: 40px;
 }
 
-nav .nav-item:not(:first-child) {
-  margin-left: 16px;
+.nav-rightMenu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-nav .nav-item:last-child {
-  margin-left: auto;
+.nav-rightMenu .nav-item:not(:first-child) {
+  margin-left: 16px;
 }
 
 .nav-item {
@@ -135,21 +138,25 @@ nav .nav-item:last-child {
 
 .nav-item a {
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: rgb(44, 45, 51); /*Dark Night*/
+}
+
+.nav-item.is-logo a {
+  font-weight: 900;
+  line-height: 18px;
 }
 
 .nav-item.is-highlight {
   background: linear-gradient(to top, papayawhip, papayawhip 8px, white 8px, white); 
 }
 
-
 .nav-item.is-cta a {
   display: inline-block;
-  padding: 0 16px;
-  border: 1px solid rgba(44, 45, 51, 0.7); /*Dark Night*/
+  padding: 0px 16px;
+  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
   border-radius: 16px;
 }
 
@@ -245,69 +252,7 @@ Work
 *****************************/
 
 .work-masthead {
-  margin-top: 120px;
-  display: flex;
-  align-items: center;
-  color: rgb(44, 45, 51); /*Dark Night */
-}
-
-.work-mastheadTitle {
-  width: 100%;
-  max-width: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.name-row {
-  position: relative;
-  display: flex;
-}
-
-.name-row.is-first {
-  background: papayawhip;
-}
-
-.name-row.is-last {
-  opacity: 0.4;
-}
-
-.name-letter {
-  width: 48px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.name-separator {
-  height: 12px;
-  width: 12px;
-  background-color: rgb(44, 45, 51); /*Dark Night*/
-}
-
-.work-mastheadDescription {
-  width: 100%;
-  max-width: 620px;
-  margin-left: 40px;
-}
-
-.work-mastheadDescription p {
-  margin: auto;
-  max-width: 428px;
-  text-align: center;
-  background: papayawhip;
-}
-
-@media screen and (max-width: 1023px) {
-  .work-masthead {
-    flex-direction: column;
-  }
-
-  .work-mastheadDescription {
-    margin-left: 0;
-    margin-top: 24px;
-  }
+  margin: 120px 0 160px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -320,7 +265,7 @@ Work
 Projects
 *****************************/
 
-.caseStudyList-container .caseStudy-container {
+.caseStudyList-container .caseStudy-container:not(:first-child) {
   margin-top: 120px;
 }
 
@@ -373,7 +318,7 @@ Projects
 .caseStudy-imageContainer {
   width: 100%;
   margin-left: 40px;
-  background: rgba(44, 45, 51, 0.70); /*Dark Night*/
+  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
   box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
               -8px 8px 40px rgba(131,143,160,0.2);
 }
@@ -414,19 +359,15 @@ Contact
 *****************************/
 
 .contact-section {
-  max-width: 1040px;
-  padding: 0 40px;
-  margin: 120px auto 80px auto;
+  padding: 80px;
+  margin: 160px auto 0 auto;
+  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
 }
 
 .contact-container {
   max-width: 600px;
-  padding: 40px 24px;
   margin: auto;
   text-align: center;
-  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
-  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
-              -8px 8px 40px rgba(131,143,160,0.2);
 }
 
 .contact-imageContainer {
@@ -448,11 +389,14 @@ Contact
   width: 100%;
   max-width: 80px;
   margin: 16px auto 0 auto;
-  padding: 0 16px;
-  border: 2px solid rgb(56, 97, 154); /* Evening Sky Blue */
+  padding: 4px 16px;
   border-radius: 16px;
   text-decoration: none;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(44, 45, 51, 1); /*Dark Night*/
+  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
 }
 
 @media screen and (max-width: 767px) {
