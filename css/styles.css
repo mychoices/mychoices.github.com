@@ -14,8 +14,8 @@ body {
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 56px;
   margin: 0 0 0 0;
   font-weight: 900;
 }
@@ -255,9 +255,32 @@ Work
   margin: 120px 0 160px 0;
 }
 
+
+@media screen and (max-width: 1023px) {
+  .work-title {
+    max-width: 520px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .work-description {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .work-masthead {
     margin-top: 80px;
+    margin-bottom: 120px;
+  }
+
+  .work-title {
+    max-width: 320px;
+  }
+
+  .work-description {
+    max-width: 304px;
+    margin: auto;
   }
 }
 
@@ -354,7 +377,7 @@ Projects
 }
 
 @media screen and (max-width: 767px) {
-  .caseStudyList-container .caseStudy-container {
+  .caseStudyList-container .caseStudy-container:not(:first-child) {
     margin-top: 80px;
   }
 
@@ -410,8 +433,8 @@ Contact
 
 @media screen and (max-width: 767px) {
   .contact-section {
-    padding: 0 24px;
-    margin: 80px auto 80px auto;
+    padding: 40px 24px;
+    margin: 120px auto 0px auto;
   }
 }
 
