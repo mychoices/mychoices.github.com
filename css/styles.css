@@ -131,9 +131,10 @@ nav {
 
 .nav-item {
   padding: 0 4px;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
+}
+
+.nav-item.is-logo {
+  padding: 0;
 }
 
 .nav-item a {
@@ -146,7 +147,6 @@ nav {
 
 .nav-item.is-logo a {
   font-weight: 900;
-  line-height: 18px;
 }
 
 .nav-item.is-highlight {
