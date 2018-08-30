@@ -13,14 +13,14 @@ body {
   color: rgb(44, 45, 51); /*Dark Night*/
 }
 
-h1 {
+h1, .is-h1 {
   font-size: 36px;
   line-height: 56px;
   margin: 0 0 0 0;
   font-weight: 900;
 }
 
-h2 {
+h2, .is-h2 {
   font-size: 22px;
   line-height: 36px;
   margin: 0 0 0 0;
@@ -55,12 +55,12 @@ a:active {
     line-height: 24px;
   }
   
-  h1 {
+  h1, .is-h1 {
     font-size: 32px;
     line-height: 48px;
   }
   
-  h2 {
+  h2 .is-h2 {
     font-size: 20px;
     line-height: 30px;
   }
@@ -139,7 +139,7 @@ nav {
 
 .nav-item a {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 16px;
   line-height: 24px;
   color: rgb(44, 45, 51); /*Dark Night*/
@@ -166,119 +166,103 @@ nav {
   }
 }
 
+
+/*****************************
+Bottom call-to-action
+*****************************/
+
+.bottomCta-container {
+  max-width: 1040px;
+  margin: 160px auto 0 auto;
+  padding: 0 40px;
+}
+
+.bottomCta-container a {
+  font-weight: 900;
+}
+
 /*****************************
 Footer
 *****************************/
 
 footer {
   color: rgb(44, 45, 51); /*Dark Night*/
-  background: white; 
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
+  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
+  margin-top: 40px;
 }
 
 .footerContent-container {
   max-width: 1040px;
   margin: auto;
-  padding: 40px;
+  padding: 40px 40px 16px 40px;
+}
+
+.footer-separator {
+  height: 16px; 
+  width: 80px;
+  margin-bottom: 4px;
+  background: papayawhip;
+}
+
+.footer-section a {
+  font-weight: 900;
+}
+
+.footer-section .footer-linkContainer:not(:first-child) {
+  margin-top: 8px;
+}
+
+.footer-linkContainer {
   display: flex;
-  justify-content: space-between;
 }
 
-.footer-section .footer-item:not(:first-child) {
-  margin-top: 16px;
-}
+.footer-linkContainer .footer-link {
+  margin-left: 8px;
+} 
 
-.footer-section.is-rightGroup {
-  display: flex;
-}
-
-.footer-section.is-follow {
-  margin-left: 200px;
-}
-
-.footer-item.is-header {
-  font-size: 12px;
+.footer-section.is-postscript {
+  margin-top: 24px;
   font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 2px;
-}
-
-.footer-item.is-description {
-  max-width: 272px;
-  margin-bottom: 40px;
-}
-
-.footer-item a {
-  color: rgb(44, 45, 51); /*Dark Night*/
-  font-weight: 300;
-}
-
-.footer-icon {
-  margin-right: 8px;
 }
 
 @media screen and (max-width: 1023px) {
-  .footer-section.is-follow {
-    margin-left: 80px;
-  }
 }
 
 @media screen and (max-width: 767px) {
-  .footerContent-container {
-    max-width: 400px;
-    padding: 40px 24px;
-    flex-direction: column;
-  }
-
-  .footer-section.is-about {
-    text-align: center;
-  }
-
-  .footer-item.is-description {
-    margin-top: 0 !important;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .footer-section.is-follow {
-    margin-left: auto;
-  }
 }
 
 /*****************************
 Work
 *****************************/
 
-.work-masthead {
-  margin: 120px 0 160px 0;
+.aboveFold-container {
+  margin-top: 120px;
 }
 
 
 @media screen and (max-width: 1023px) {
-  .work-title {
+  .aboveFold-title {
     max-width: 520px;
     margin: auto;
     text-align: center;
   }
 
-  .work-description {
+  .aboveFold-description {
     text-align: center;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .work-masthead {
+  .aboveFold-container {
     margin-top: 80px;
     margin-bottom: 120px;
   }
 
-  .work-title {
+  .aboveFold-title {
     max-width: 320px;
   }
 
-  .work-description {
+  .aboveFold-description {
     max-width: 304px;
     margin: auto;
   }
@@ -287,6 +271,10 @@ Work
 /*****************************
 Projects
 *****************************/
+
+.caseStudyList-container {
+  margin-top: 160px;
+}
 
 .caseStudyList-container .caseStudy-container:not(:first-child) {
   margin-top: 120px;
@@ -316,9 +304,7 @@ Projects
 }
 
 .caseStudy-actions {
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-around;
+  margin-top: 16px;
 }
 
 .caseStudy-link {
@@ -333,7 +319,7 @@ Projects
 }
 
 .caseStudy-link a {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 16px;
   line-height: 24px;
 }
@@ -387,58 +373,6 @@ Projects
 }
 
 /*****************************
-Contact
-*****************************/
-
-.contact-section {
-  padding: 80px;
-  margin: 160px auto 0 auto;
-  background: rgba(44, 45, 51, 0.05); /*Dark Night*/
-}
-
-.contact-container {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.contact-imageContainer {
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-}
-
-.contact-imageContainer figure {
-  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
-}
-
-.contact-section h2{
-  margin-top: 16px;
-}
-
-.contact-cta a {
-  display: inline-block;
-  width: 100%;
-  max-width: 80px;
-  margin: 16px auto 0 auto;
-  padding: 4px 16px;
-  border-radius: 16px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: rgba(44, 45, 51, 1); /*Dark Night*/
-  background: rgba(44, 45, 51, 0.1); /*Dark Night*/
-}
-
-@media screen and (max-width: 767px) {
-  .contact-section {
-    padding: 40px 24px;
-    margin: 120px auto 0px auto;
-  }
-}
-
-/*****************************
 About
 *****************************/
 
@@ -464,6 +398,7 @@ About
 
 .about-content {
   display: flex;
+  margin-top: 40px;
 }
 
 .about-imageContainer {
