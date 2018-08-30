@@ -20,19 +20,10 @@ h1, .is-h1 {
   font-weight: 900;
 }
 
-h2, .is-h2 {
+h2 {
   font-size: 22px;
   line-height: 36px;
   margin: 0 0 0 0;
-  font-weight: 700;
-}
-
-h3 {
-  color: rgb(44, 45, 51); /*Dark Night*/
-  font-size: 14px;
-  line-height: 28px;
-  margin: 0 0 0 0;
-  letter-spacing: 2px;
   font-weight: 700;
 }
 
@@ -56,18 +47,25 @@ a:active {
   }
   
   h1, .is-h1 {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 44px;
   }
   
-  h2 .is-h2 {
+  h2 {
     font-size: 20px;
     line-height: 30px;
   }
-  
-  h3 {
-    font-size: 12px;
-    line-height: 24px;
+}
+
+@media screen and (max-width: 374px) {
+  h1, .is-h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 
@@ -107,7 +105,7 @@ header {
   background: white; 
 }
 
-.headerContent-container {
+.header-contentContainer {
   max-width: 1040px;
   padding: 0 40px;
   margin: auto;
@@ -160,9 +158,35 @@ nav {
   border-radius: 16px;
 }
 
+.shortened-lastname {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
-  .headerContent-container {
+  .header-contentContainer {
     padding: 0 24px;
+  }
+
+  nav {
+    padding-top: 24px;
+  }
+
+  .nav-rightMenu .nav-item:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .header-contentContainer {
+    padding: 0 16px;
+  }
+
+  .full-lastname {
+    display: none;
+  }
+
+  .shortened-lastname {
+    display: initial;
   }
 }
 
@@ -177,20 +201,21 @@ Above fold
 
 @media screen and (max-width: 1023px) {
   .aboveFold-title {
-    max-width: 520px;
+    max-width: 450px;
     margin: auto;
     text-align: center;
   }
 
   .aboveFold-description {
     text-align: center;
+    max-width: 460px;
+    margin: auto;
   }
 }
 
 @media screen and (max-width: 767px) {
   .aboveFold-container {
     margin-top: 80px;
-    margin-bottom: 120px;
   }
 
   .aboveFold-title {
@@ -198,7 +223,7 @@ Above fold
   }
 
   .aboveFold-description {
-    max-width: 304px;
+    max-width: 250px;
     margin: auto;
   }
 }
@@ -210,12 +235,46 @@ Bottom call-to-action
 
 .bottomCta-container {
   max-width: 1040px;
-  margin: 160px auto 0 auto;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 40px;
 }
 
 .bottomCta-container a {
   font-weight: 900;
+}
+
+.bottomCta-separator {
+  height: 16px; 
+  width: 80px;
+  margin-bottom: 4px;
+  background: papayawhip;
+}
+
+@media screen and (max-width: 1023px) {
+  .bottomCta-container {
+    max-width: 410px;
+    text-align: center;
+  }
+
+  .bottomCta-separator {
+    margin-left: auto;  
+    margin-right: auto;  
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bottomCta-container {
+    margin-top: 120px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .bottomCta-container {
+    padding: 0 8px;
+  }
 }
 
 /*****************************
@@ -228,28 +287,21 @@ footer {
   margin-top: 40px;
 }
 
-.footerContent-container {
+.footer-contentContainer {
   max-width: 1040px;
   margin: auto;
   padding: 40px;
-}
-
-.footer-separator {
-  height: 16px; 
-  width: 80px;
-  margin-bottom: 4px;
-  background: papayawhip;
 }
 
 .footer-section a {
   font-weight: 900;
 }
 
-.footer-section .footer-linkContainer:not(:first-child) {
+.footer-section .footer-socialMediaContainer:not(:first-child) {
   margin-top: 8px;
 }
 
-.footer-linkContainer {
+.footer-socialMediaContainer {
   display: flex;
 }
 
@@ -258,9 +310,29 @@ footer {
 } 
 
 @media screen and (max-width: 1023px) {
+  .footer-emailContainer {
+    text-align: center;
+  }
+
+  .footer-socialMediaContainer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-linkContainer {
+    margin-top: 8px;
+  }
+
+  .footer-linkContainer .footer-link:first-child {
+    margin-left: 0px;
+  } 
 }
 
 @media screen and (max-width: 767px) {
+  .footer-contentContainer {
+    padding: 24px 0;
+  }
 }
 
 /*****************************
@@ -352,16 +424,32 @@ Projects
     max-width: 520px;
     margin-bottom: 8px;
     margin-left: 0;
+    box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
+                -4px 4px 16px rgba(131,143,160,0.2);
   }
 }
 
 @media screen and (max-width: 767px) {
+  .caseStudyList-container {
+    margin-top: 120px;
+  }
+
   .caseStudyList-container .caseStudy-container:not(:first-child) {
     margin-top: 80px;
   }
 
   .caseStudy-container {
     padding: 0 24px;
+  }
+
+  .caseStudy-actions {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .caseStudy-container {
+    padding: 0 8px;
   }
 }
 
@@ -371,8 +459,10 @@ About
 
 .about-cardContainer {
   max-width: 1040px;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 40px;
-  margin: 160px auto 0 auto;
 }
 
 .about-cardStyle {
@@ -414,45 +504,41 @@ About
 }
 
 @media screen and (max-width: 1023px) {
-  .about-background {
-    background: rgba(44, 45, 51, 0.05); /*Dark Night*/
-  }
-
-  .about-descriptions {
-    min-width: 352px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .about-main {
-    padding: 0 24px;
-  }
-
-  .about-background {
+  .about-cardStyle {
     padding: 40px 0;
-    box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
-                -4px 4px 16px rgba(131,143,160,0.2);
   }
 
-  .about-container {
-    padding: 0 24px;
-  }
-
-  .about-title {
-    text-align: center;
-  }
-
-  .about-content {
+  .about-contentContainer {
     flex-direction: column;
     align-items: center;
+    padding: 0 24px;
   }
 
   .about-imageContainer {
     margin-right: 0;
     margin-bottom: 24px;
   }
+}
 
-  .about-descriptions {
-    min-width: initial; 
+@media screen and (max-width: 767px) {
+  .about-cardContainer {
+    margin-top: 120px;
+    padding: 0 24px;
+  }
+
+  .about-cardStyle {
+    padding: 24px 0;
+    box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
+                -4px 4px 16px rgba(131,143,160,0.2);
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .about-cardContainer {
+    padding: 0 8px;
+  }
+
+  .about-contentContainer {
+    padding: 0 16px;
   }
 }
