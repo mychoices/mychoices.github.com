@@ -11,8 +11,8 @@ body {
 }
 
 h1, h2 {
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 32px;
+  line-height: 40px;
   margin: 0 0 24px 0;
   font-weight: 900;
 }
@@ -47,32 +47,12 @@ a.is-cta {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
+@media (min-width: 768px) {
   h1, h2 {
-    font-size: 30px;
-    line-height: 44px;
-  }
-  
-  h3 {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  h1, h2 {
-    font-size: 28px;
-    line-height: 40px;
-  }
-
-  h3 {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px 0;
+    font-weight: 900;
   }
 }
 
@@ -109,32 +89,30 @@ Text group
 *****************************/
 
 .textGroup {
+  grid-column: 1 / span 4;
   display: grid;
-  grid-column-start: 1;
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 24px;
   column-gap: 24px;
-}
-
-.textGroup.with-largeHeader {
-  grid-column-end: span 6;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.textGroup.with-subHeader {
-  grid-column-end: span 4;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .textGroup * {
   grid-column: 1 / span 4;
 }
 
-.textGroup h1, .textGroup h2 {
-  grid-column: 1 / -1;
-}
-
 .textGroup p:not(:nth-child(2)) {
   margin-top: 24px;
+}
+
+@media (min-width: 600px) {
+  .textGroup.with-largeHeader {
+    grid-column-end: span 6;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .textGroup h1, .textGroup h2 {
+    grid-column: 1 / -1;
+  }
 }
 
 /*****************************
@@ -143,8 +121,8 @@ Header
 
 nav {
   margin: 0 auto;
-  padding: 0 128px;
-  max-width: 1280px;
+  padding-right: 16px;
+  padding-left: 16px;
   display: flex;
   align-items: center;
   padding-top: 24px;
@@ -157,7 +135,7 @@ nav {
 }
 
 .nav-rightMenu .nav-item:not(:first-child) {
-  margin-left: 24px;
+  margin-left: 8px;
 }
 
 .nav-item.is-logo {
@@ -170,27 +148,87 @@ nav {
   color: rgb(44, 45, 51); /*Dark Night*/
 }
 
+@media (min-width: 768px) {
+  nav {
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+
+  .nav-rightMenu .nav-item:not(:first-child) {
+    margin-left: 24px;
+  }
+}
+
+@media (min-width: 1080px) {
+  nav {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav {
+    padding-right: 120px;
+    padding-left: 120px;
+    max-width: 1280px;
+  }
+}
+
 /*****************************
 About
 *****************************/
 
 .about-section {
+  padding-right: 16px;
+  padding-left: 16px;
   margin: 192px auto;
-  padding: 0 128px;
-  max-width: 1280px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 24px;
-  column-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 8px;
+  column-gap: 8px;
+}
+
+main .about-section:last-child {
+  margin-bottom: 0;
 }
 
 .about-section::before {
   content: '';
   height: 16px;
+  max-width: 72px;
   margin-bottom: 8px;
   background: papayawhip;
   grid-column: 1 / 2;
   display: block;
+}
+
+@media(min-width: 600px) {
+  .about-section {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding-right: 72px;
+    padding-left: 72px;
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .about-section {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-section {
+    padding-right: 120px;
+    padding-left: 120px;
+    max-width: 1280px;
+  }
 }
 
 /*****************************
@@ -202,10 +240,9 @@ main .project-section:not(:first-child) {
 }
 
 .project-section {
+  padding: 0 24px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
-  padding: 0 80px;
   position: relative;
 }
 
@@ -219,22 +256,20 @@ main .project-section:not(:first-child) {
 
 .project-background {
   background: rgba(44, 45, 51, 0.05); /*Dark Night*/
-  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
-              -8px 8px 40px rgba(131,143,160,0.2);
+  box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
+              -4px 4px 16px rgba(131,143,160,0.2);
 }
 
 .project-contentContainer {
-  padding: 48px 48px 0 48px;
+  padding: 24px 24px 0 24px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 24px;
   column-gap: 24px;
 }
 
 .project-overview {
-  grid-column: 1 / span 8;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 24px;
   column-gap: 24px;
 }
@@ -244,13 +279,63 @@ main .project-section:not(:first-child) {
 }
 
 .project-details {
-  grid-column: 1 / span 6;
+  grid-column-start: 1;
+  grid-column-end: span 4;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   column-gap: 24px;
   row-gap: 24px;
+}
+
+@media (min-width: 600px) {
+  .project-section {
+    max-width: 1120px;
+  }
+
+  .project-contentContainer {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .project-overview {
+    grid-column-end: span 6;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .project-contentContainer {
+    padding: 48px 48px 0 48px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .project-background {
+    box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
+                -8px 8px 40px rgba(131,143,160,0.2);
+  }
+
+  .project-contentContainer {
+    padding: 48px 48px 0 48px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .project-overview {
+    grid-column-end: span 8;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .project-details {
+    grid-column-end: span 6;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-section {
+    padding: 0 72px;
+    max-width: 1376px;
+  }
 }
 
 /*****************************
@@ -425,62 +510,76 @@ Van life
 
 .vanLife-section {
   margin-top: 112px;
-  grid-column: 4 / span 8;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 24px;
   column-gap: 24px;
 }
 
 .vanLife-imgPortrait {
-  align-self: start;
-  grid-column: 5 / span 4;
-  grid-row: 1 / 5;
-}
-
-figure[data-ratio="vanLife-imgPortrait"] {
-  padding-top: 125%;
-  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
-              -8px 8px 40px rgba(131,143,160,0.2);
+  display: none;
 }
 
 .vanLife-imgLandscape {
-  margin-top: 48px;
-  grid-column: 1 / span 6;
-  grid-row: 4;
+  margin-bottom: 24px;
+  grid-column: 1 / -1;
+  grid-row: -1;
 }
 
 figure[data-ratio="vanLife-imgLandscape"] {
   padding-top: 52.36%;
-  box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
-              -8px 8px 40px rgba(131,143,160,0.2);
 }
 
-/*****************************
-Contact CTA
-*****************************/
+@media (min-width: 600px) {
+  .vanLife-section {
+    grid-template-columns: repeat(8, 1fr);
+  }
 
-.contactCta-section {
-  margin: 192px auto 0px auto;
-  padding: 0 128px;
-  max-width: 1280px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 24px;
-  column-gap: 24px;
+  .vanLife-imgPortrait {
+    display: initial;
+    z-index: 100;
+    align-self: start;
+    grid-column: 5 / span 4;
+    grid-row: 1 / 5;
+  }
+
+  figure[data-ratio="vanLife-imgPortrait"] {
+    padding-top: 125%;
+    box-shadow: 4px 4px 20px rgba(131,143,160,0.2), 
+                -4px 4px 20px rgba(131,143,160,0.2);
+  }
+
+  .vanLife-imgLandscape {
+    margin-top: 48px;
+    margin-bottom: 0px;
+    grid-column: 1 / span 6;
+    grid-row: 4;
+  }
+
+  figure[data-ratio="vanLife-imgLandscape"] {
+    padding-top: 52.36%;
+    box-shadow: 4px 4px 20px rgba(131,143,160,0.2), 
+                -4px 4px 20px rgba(131,143,160,0.2);
+  }
 }
 
-.contactCta-section::before {
-  content: '';
-  height: 16px;
-  margin-bottom: 8px;
-  background: papayawhip;
-  grid-column: 1 / 2;
-  display: block;
-}
-
-.contactCta-text {
-  grid-column: 1 / span 5;
+@media (min-width: 1080px) {
+  .vanLife-section {
+    grid-column: 4 / 12;
+  }
+  
+  figure[data-ratio="vanLife-imgPortrait"] {
+    padding-top: 125%;
+    box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
+                -8px 8px 40px rgba(131,143,160,0.2);
+  }
+  
+  figure[data-ratio="vanLife-imgLandscape"] {
+    padding-top: 52.36%;
+    box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
+                -8px 8px 40px rgba(131,143,160,0.2);
+  }
 }
 
 /*****************************
@@ -494,8 +593,7 @@ footer {
 
 .footer-contentContainer {
   margin: 0 auto;
-  padding: 24px 128px;
-  max-width: 1280px;
+  padding: 24px 16px;
 }
 
 .footer-section a {
@@ -503,40 +601,47 @@ footer {
   color: rgb(44, 45, 51); /*Dark Night*/
 }
 
-.footer-section .footer-socialMediaContainer:not(:first-child) {
+.footer-socialMediaContainer {
   margin-top: 8px;
 }
 
-.footer-socialMediaContainer {
-  display: flex;
+.footer-linkContainer {
+  margin-top: 8px;
 }
 
-.footer-linkContainer .footer-link {
-  margin-left: 4px;
+.footer-linkContainer .footer-link:not(:first-child) {
+  margin-left: 8px;
 } 
 
-@media screen and (max-width: 1023px) {
-  .footer-emailContainer {
-    text-align: center;
+@media (min-width: 600px) {
+  .footer-contentContainer {
+    max-width: 1024px;
   }
 
   .footer-socialMediaContainer {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
   }
 
   .footer-linkContainer {
-    margin-top: 8px;
+    margin-top: 0px;
   }
 
-  .footer-linkContainer .footer-link:first-child {
-    margin-left: 0px;
+  .footer-linkContainer .footer-link {
+    margin-left: 4px !important;
   } 
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) {
   .footer-contentContainer {
-    padding: 24px 0;
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-contentContainer {
+    padding-right: 120px;
+    padding-left: 120px;
+    max-width: 1280px;
   }
 }
