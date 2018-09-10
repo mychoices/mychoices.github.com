@@ -32,11 +32,12 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: rgb(56, 97, 154); /* Evening Sky Blue */
+  color: rgb(44, 45, 51); /*Dark Night*/
   text-decoration: underline;
 }
 
 a.is-cta {
+  color: rgb(56, 97, 154); /* Evening Sky Blue */
   text-decoration: none;
   display: inline-block;
   margin-top: 24px;
@@ -244,24 +245,21 @@ main .project-section:not(:first-child) {
 }
 
 .project-section {
-  padding: 0 24px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
 }
 
 .project-count {
-  padding-left: 24px;
+  padding-left: 16px;
 }
 
 .project-background {
   background: rgba(44, 45, 51, 0.05); /*Dark Night*/
-  box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
-              -4px 4px 16px rgba(131,143,160,0.2);
 }
 
 .project-contentContainer {
-  padding: 24px 24px 0 24px;
+  padding: 24px 16px 0 16px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 24px;
@@ -291,36 +289,57 @@ main .project-section:not(:first-child) {
 }
 
 .project-detailTitle {
-  font-style: italic;
+  font-weight: 400;
 }
 
-@media (min-width: 600px) {
-  .project-section {
-    max-width: 1120px;
-  }
-
-  .project-details {
-    grid-column-end: span 6;
-    grid-template-columns: 1fr 4fr;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-    column-gap: 24px;
-    row-gap: 24px;
-  }
-
-  .project-details .project-detailTitle:not(:first-child) {
-    margin-top: 0;
-  }
+.project-disclosure {
+  margin-top: 24px;
+  grid-column: 1;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
   .project-contentContainer {
+    padding: 24px 24px 0 24px;
     grid-template-columns: repeat(8, 1fr);
   }
 
   .project-overview {
     grid-column-end: span 8;
     grid-template-columns: repeat(8, 1fr);
+  }
+
+  .project-section {
+    padding: 0 24px;
+    max-width: 1120px;
+  }
+
+  .project-background {
+    box-shadow: 4px 4px 16px rgba(131,143,160,0.2), 
+                -4px 4px 16px rgba(131,143,160,0.2);
+  }
+
+  .project-count {
+    padding-left: 24px;
+  }
+
+  .project-details {
+    grid-column-end: span 6;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 24px;
+  }
+
+  .project-details .project-detailTitle:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .project-detailTitle {
+    font-weight: 300;
+  }
+
+  .project-disclosure {
+    margin-top: 0px;
+    grid-column: 2;
   }
 }
 
@@ -603,7 +622,6 @@ figure[data-ratio="freshpool-imgMockups"] {
 
 @media (min-width: 768px) {
   .freshpool-content {
-    padding-bottom: 48px;
     grid-row-gap: 96px;
     row-gap: 96px;
   }
@@ -646,6 +664,10 @@ figure[data-ratio="freshpool-imgMockups"] {
 }
 
 @media (min-width: 1080px) {
+  .freshpool-content {
+    padding-bottom: 48px;
+  }
+
   .freshpool-challenge {
     grid-column-end: span 12;
     grid-template-columns: repeat(12, 1fr);
@@ -683,7 +705,7 @@ Van life
 *****************************/
 
 .vanLife-section {
-  margin-top: 112px;
+  margin-top: 48px;
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -712,7 +734,6 @@ figure[data-ratio="vanLife-imgLandscape"] {
 
   .vanLife-imgPortrait {
     display: initial;
-    z-index: 100;
     align-self: start;
     grid-column: 5 / span 4;
     grid-row: 1 / 5;
@@ -744,7 +765,6 @@ figure[data-ratio="vanLife-imgLandscape"] {
   }
   
   figure[data-ratio="vanLife-imgPortrait"] {
-    padding-top: 125%;
     box-shadow: 8px 8px 40px rgba(131,143,160,0.2), 
                 -8px 8px 40px rgba(131,143,160,0.2);
   }
@@ -787,8 +807,10 @@ footer {
   margin-left: 8px;
 } 
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .footer-contentContainer {
+    padding-right: 48px;
+    padding-left: 48px;
     max-width: 1024px;
   }
 
@@ -803,13 +825,6 @@ footer {
   .footer-linkContainer .footer-link {
     margin-left: 4px !important;
   } 
-}
-
-@media (min-width: 768px) {
-  .footer-contentContainer {
-    padding-right: 48px;
-    padding-left: 48px;
-  }
 }
 
 @media (min-width: 1080px) {
